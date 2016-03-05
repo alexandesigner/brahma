@@ -1,6 +1,6 @@
 {
   "name": "brahma-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Brahma is an user interface application architecture Trimurti.",
   "main": "app/index.html",
   "license": "MIT",
