@@ -13,7 +13,7 @@
   var imagemin = require('gulp-imagemin');
   var useref = require('gulp-useref');
   var uglify = require('gulp-uglify');
-  var concatFiles = require('gulp-concat');
+  var concatTo = require('gulp-concat');
   var changed = require('gulp-changed');
   var historyApiFallback = require('connect-history-api-fallback');
   var psi = require('psi');
@@ -24,8 +24,9 @@
   // Assets Paths
   var paths = {
     html:    ['app/templates/**/*.html', 'app/index.html'],
-    scripts: ['app/js/scripts.js'],
-    styles:  ['app/src/scss/**/*.scss'],
+    scripts: ['app/scripts/**/*.js'],
+    styles:  ['app/styles/**/*.css'],
+    scss:  ['app/scss/**/*.scss'],
     images:  ['app/images/**/*']
   };
 
@@ -42,11 +43,11 @@
   });
 
   // Stylesheets
-  gulp.task('styles', function () {
-  return gulp.src(paths.styles)
-    .pipe(sass({outputStyle: 'expanded', errLogToConsole: true}))
-    .pipe(concatFiles('styles.css'))
-    .pipe(gulp.dest('app/css'))
+  gulp.task('scss', function () {
+  return gulp.src(paths.scss)
+    .pipe(sass({outputStyle: 'nested', errLogToConsole: true}))
+    .pipe(concatTo('styles.css'))
+    .pipe(gulp.dest('app/styles'))
     .pipe(connect.reload());
   });
 
@@ -74,7 +75,18 @@
     .pipe(jshint.reporter('jshint-stylish'));
   });
 
-  // Pagespeed
+  // Build Concat/Compile
+  gulp.task('useref', function () {
+    return gulp.src(paths.html)
+    .pipe(useref())
+    .pipe(gulp.dest('dist'));
+  });
+
+  // Build Fonts
+  gulp.task('fonts', function() {
+    gulp.src('app/fonts/**/*.{ttf,woff,eof,svg}')
+    .pipe(gulp.dest('dist/fonts'));
+  });
 
   // Mobile
   gulp.task('psi-mobile', function (cb) {
@@ -94,26 +106,13 @@
     }, cb);
   });
 
-  // Build Concat/Compile
-  gulp.task('useref', function () {
-    return gulp.src(paths.html)
-    .pipe(useref())
-    .pipe(gulp.dest('dist'));
-  });
-
-  // Build Fonts
-  gulp.task('fonts', function() {
-    gulp.src('app/fonts/**/*.{ttf,woff,eof,svg}')
-    .pipe(gulp.dest('dist/fonts'));
-  });
-
   // Observator
   gulp.task('watch', function() {
     gulp.watch(paths.html, ['html']);
-    gulp.watch(paths.styles, ['styles']);
+    gulp.watch(paths.scss, ['scss']);
   });
 
   // Run tasks
-  gulp.task('default', [ 'html', 'useref', 'imagemin', 'styles', 'watch', 'connect' ]);
+  gulp.task('default', [ 'html', 'useref', 'imagemin', 'scss', 'watch', 'connect' ]);
 
 }(require));

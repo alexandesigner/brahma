@@ -28,6 +28,7 @@ node_modules
 app/bower_components
 app/dist
 app/build
+app/templates
 
 # Optional npm cache directory
 .npm

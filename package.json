@@ -1,17 +1,17 @@
 {
-  "name": "frontlabs",
+  "name": "brahma",
   "version": "0.0.1",
-  "description": "A front-end lab's that helps you build fast an modern web and mobile apps.",
+  "description": "The User interface that helps you build fast, modern mobile web apps.",
   "private": "true",
   "main": "app/index.html",
   "license": "MIT",
-  "repository": "allanalexandre/frontlabs",
+  "repository": "allanalexandre/brahma",
   "author": "Allan Alexandre",
   "keywords": [
-    "frontlabs",
+    "brahma",
     "user interface",
     "boilerplate",
-    "bootstrap"
+    "trimurti"
   ],
   "devDependencies": {
     "connect-history-api-fallback": "^1.1.0",
