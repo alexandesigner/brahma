@@ -1,4 +1,7 @@
 ![Brahma](http://s24.postimg.org/6mw7b991x/brahma_hero.jpg)
+
+The Creator
+
 http://trimurti.github.io/brahma
 
 ## Overview
