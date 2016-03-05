@@ -1,0 +1,26 @@
+/* Config */
+/***********************************/
+
+$total_width: 1260px;
+$container_margin: auto;
+$gutter_width: 20px;
+$max_width: 1260px;
+
+.content {
+	@include clearfix();
+	margin:0 auto;
+}
+
+// Screens Resolutions
+@import "resolutions/no-screen";
+
+// Mobile
+@import "resolutions/mobile";
+@import "resolutions/mobile-wide";
+
+// Tablet
+@import "resolutions/tablet";
+
+// Desktop
+@import "resolutions/desktop";
+@import "resolutions/desktop-wide";
