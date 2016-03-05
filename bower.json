@@ -4,7 +4,7 @@
   "authors": [
     "Allan Alexandre <alexandesigner@gmail.com>"
   ],
-  "description": "A front-end template that helps you build fast, modern mobile and browser web apps",
+  "description": "Brahma is an user interface application architecture Trimurti.",
   "main": "app/styles/styles.css",
   "keywords": [
     "brahma",

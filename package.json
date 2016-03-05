@@ -1,7 +1,7 @@
 {
   "name": "brahma-ui",
   "version": "0.0.1",
-  "description": "The User interface that helps you build fast, modern mobile web apps.",
+  "description": "Brahma is an user interface application architecture Trimurti.",
   "main": "app/index.html",
   "license": "MIT",
   "repository": "allanalexandre/brahma",
