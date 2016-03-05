@@ -1,35 +1,12 @@
 /* Colors */
 /***********************************/
 
-/* Palette */
-// color:($red, value);
-// color:($pink, value);
-// color:($purple, value);
-// color:($deep-purple, value);
-// color:($indigo, value);
-// color:($blue, value);
-// color:($light-blue, value);
-// color:($green, value);
-// color:($light-green, value);
-// color:($lime, value);
-// color:($yellow, value);
-// color:($amber, value);
-// color:($orange, value);
-// color:($deep-orange, value);
-// color:($brown, value);
-// color:($grey, value);
-// color:($blue-grey, value);
-// color:($dark, value);
-// color:($light, value);
-
-
 /* Function */
 @function color($color, $value: 500) {
   @return map-get($color, $value);
 }
 
 /* Colors */
-
 $red: (
   50:   #ffebee,
   100:  #ffcdd2,
