@@ -26,6 +26,7 @@ build/Release
 # Dependency directory
 node_modules
 app/bower_components
+app/dist
 app/build
 
 # Optional npm cache directory
