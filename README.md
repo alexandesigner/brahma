@@ -1,4 +1,4 @@
-![Brahma](http://s11.postimg.org/chrmyegxf/brahma_hero.jpg)
+![Brahma](http://s24.postimg.org/6mw7b991x/brahma_hero.jpg)
 http://trimurti.github.io/brahma
 
 ## Overview
