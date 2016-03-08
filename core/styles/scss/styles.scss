@@ -8,14 +8,12 @@
 // Defaults
 @import "defaults";
 
-
 // Helpers
 @import "helpers/mixins";
 @import "helpers/utilities";
 @import "helpers/reset";
 
 // Base
-@import "base/fonts";
 @import "base/text";
 @import "base/colors";
 @import "base/images";

@@ -70,7 +70,12 @@
   @include border-radius($base-radius);
 
   .title {
-    float:left;margin-right:20px;
+    float:left;margin-right:15px;display:table;
+
+    img {
+      vertical-align:middle;
+      display:table-cell;
+    }
   }
   .menu {
     display:inline;
